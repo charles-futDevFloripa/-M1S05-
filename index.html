@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
   <section class="container">
     <div class="header">futDevShop</div>
     <div class="content">
@@ -19,19 +18,15 @@
             class="title-text">Consultar Produto</span>
         </div>
         <div class="content-extra">
-          <div class="shopping-cart"><i class="fa-solid fa-cart-shopping icon-in-title"></i> <span
-              class="title-text">vazio</span></div>
+          <div class="shopping-cart"><i class="fa-solid fa-cart-shopping icon-in-title"></i> <span class="title-text"
+              id="itens-cart">vazio</span></div>
         </div>
       </div>
       <div class="content-body">
         <form id="search-form">
           <div class="input">
-            <label for="product-code">Cód. do Produto</label>
-            <input type="number" id="product-code" name="product-code" placeholder="Código">
-          </div>
-          <div class="input">
             <label for="product-name">Nome do Produto</label>
-            <input type="text" id="product-name" name="product-name" placeholder="Nome do Produto">
+            <input type="text" id="product-name" name="product-name" placeholder="Nome do Produto" required>
           </div>
           <div class="button-search">
             <button type="button" id="search-button"><i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -41,47 +36,30 @@
       </div>
     </div>
 
-    <div class="content">
+    <div class="content" id="search-results-section">
       <div class="title">
-        <div class="content-title"><i class="fa-solid fa-folder-tree icon-in-title"></i> <span class="title-text">
-            Resultado</span></div>
+        <div class="content-title">
+          <i class="fa-solid fa-folder-tree icon-in-title"></i>
+          <span class="title-text">Resultado</span>
+        </div>
         <div class="content-extra">
-          <div class="shopping-cart"><i class="fa-solid fa-bag-shopping icon-in-title"></i> <span
-              class="title-text">Itens </span><i class="fa-solid fa-dollar-sign icon-in-title"
-              id="money-to-pay"></i><span class="title-text">20.00</span></div>
+          <div class="shopping-cart">
+            <i class="fa-solid fa-bag-shopping icon-in-title"></i>
+            <span class="title-text" id="itens"> 0 <small>Itens</small></span>
+            <i class="fa-solid fa-dollar-sign icon-in-title" id="money-to-pay"></i>
+            <span class="title-text" id="total">0.00</span>
+          </div>
         </div>
       </div>
       <div class="content-body">
-        <div class="search-result">
-          <div class="search-result-product">
-            <div class="product-details">
-              <div class="search-result-icon"><i class="fa-solid fa-tag"></i></div>
-              <div class="product-code">00001</div>
-              <div class="product-name">Nome do Produto</div>
-            </div>
-            <div class="product-price">
-              <div class="value-sign"><small>R$</small></div>
-              <div class="price">20.00</div>
-            </div>
-            <div class="product-buy"><a href="#" class="btn-buy" title="Adicionar ao carrinho"><i
-                  class="fa-solid fa-cart-plus"></i></a></div>
-          </div>
-          <div class="search-result-product">
-            <div class="product-details">
-              <div class="search-result-icon"><i class="fa-solid fa-tag"></i></div>
-              <div class="product-code">00002</div>
-              <div class="product-name">Nome do Produto muitto grande</div>
-            </div>
-            <div class="product-price">
-              <div class="value-sign"><small>R$</small></div>
-              <div class="price">1.220.00</div>
-            </div>
-            <div class="product-buy"><a href="#" class="btn-buy" title="Adicionar ao carrinho"><i
-                  class="fa-solid fa-cart-plus"></i></a></div>
-          </div>
+        <div class="search-result" id="search-result-container">
+          FAÇA UMA BUSCA VAZIA PARA EXIBIR TODOS OS PRODUTOS
         </div>
       </div>
+    </div>
+
   </section>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
